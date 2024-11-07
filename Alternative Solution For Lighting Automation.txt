@@ -1,0 +1,26 @@
+module HomeAutomationSystem (
+    input wire clk,           // Saat sinyali
+    input wire light_sensor,   // Işık sensörü girişi (0 = karanlık, 1 = aydınlık)
+    input wire motion_sensor,  // Hareket sensörü girişi (0 = hareket yok, 1 = hareket var)
+    output reg led_light       // LED ışık çıkışı
+);
+
+    // LED kontrolü için sürekli blok
+    always @(posedge clk) begin
+        // Işık sensörü kapalı ve hareket sensörü algılandığında LED'i aç
+        if (light_sensor == 0 && motion_sensor == 1) begin
+            led_light <= 1;  // LED aç
+        end else begin
+            led_light <= 0;  // LED kapalı
+        end
+    end
+
+endmodule
+
+
+clk: Saat sinyali, tüm sistemi senkronize eder.
+light_sensor: Işık sensöründen gelen sinyal (0 = karanlık, 1 = aydınlık).
+motion_sensor: Hareket sensöründen gelen sinyal (0 = hareket yok, 1 = hareket var).
+led_light: LED ışık çıkışı. Ortam karanlık ve hareket algılandığında LED açılır.
+Çalışma Mantığı
+Bu basit otomasyon sisteminde, ışık sensörü karanlık bir ortamı (örneğin, akşam saatlerini) tespit ettiğinde ve hareket sensörü aktif olduğunda, LED ışığı otomatik olarak açılır. Ortam yeterince aydınlık olduğunda ya da hareket algılanmadığında LED kapalı kalır.
