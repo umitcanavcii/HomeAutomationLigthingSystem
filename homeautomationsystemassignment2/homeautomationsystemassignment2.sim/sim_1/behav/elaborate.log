@@ -1,0 +1,9 @@
+Vivado Simulator 2016.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.1/bin/unwrapped/win64.o/xelab.exe -wto 548b1d844f954d17a64c2ae85fd290f9 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lighting_control_tb_behav xil_defaultlib.lighting_control_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port motion_sensor on this module [C:/Users/umitc/homeautomationsystemassignment2/homeautomationsystemassignment2.srcs/sim_1/new/lighting_control_tb.v:11]
+ERROR: [VRFC 10-426] cannot find port manual_switch on this module [C:/Users/umitc/homeautomationsystemassignment2/homeautomationsystemassignment2.srcs/sim_1/new/lighting_control_tb.v:12]
+ERROR: [VRFC 10-426] cannot find port light on this module [C:/Users/umitc/homeautomationsystemassignment2/homeautomationsystemassignment2.srcs/sim_1/new/lighting_control_tb.v:13]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
